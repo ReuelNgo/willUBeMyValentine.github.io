@@ -14,6 +14,7 @@
             background: linear-gradient(135deg, #ff9a9e, #fad0c4);
             font-family: 'Arial', sans-serif;
             overflow: hidden;
+            margin: auto;
         }
         .card {
             text-align: center;
@@ -22,10 +23,10 @@
             border-radius: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             max-width: 90%;
-            min-height: 300px; /* Ensures card grows with content */
+            min-height: 400px; /* Ensures card grows with content */
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content:safe;
         }
         .card h1 {
             font-size: 2.5rem;
@@ -52,7 +53,9 @@
         }
         .card button.no {
             background-color: #6c757d;
-            position: relative;
+            position: absolute;
+            justify-content: center;
+            display: flex;
             transition: left 0.5s ease, top 0.5s ease;
         }
         .card button.no:hover {
@@ -99,8 +102,9 @@
             display: flex;
             justify-content: center;
             align-content: center;
-            margin-left: 45px;
+            flex-direction: row;
         }
+
     </style>
     <script>
         function moveButton() {
@@ -142,14 +146,15 @@
 <body>
     <div class="card">
         <h1>Hi Bubs, Will You Be My Valentine?</h1>
+        <div >
+            <img src="https://instagram.fsin14-1.fna.fbcdn.net/v/t51.2885-15/473910862_18027828275558043_3115173514300766512_n.jpg?stp=dst-jpg_e15_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMTc5eDgzNy5zZHIuZjc1NzYxLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fsin14-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=6Fem67kNefUQ7kNvgHFd7jL&_nc_gid=8ec831be2e9e4e8c89c17be7827e57b6&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzU0NzY4MTc1NjIzMTIyODk1MQ%3D%3D.3-ccb7-5&oh=00_AYCaRW7EF39RnmPeo3DZoF8yR6mN-JyWqqfIBS7heI7MeQ&oe=679D280B&_nc_sid=10d13b" alt="Valentine Cat">
+        </div>
         <p>You make every day special, and I can’t imagine Valentine’s Day without you. ❤</p>
         <div class="flex">
-          <div class="flex">
-              <button onclick="showGif()">Yes</button>
-          </div>
-          <div class="flex">
-              <button class="no">No</button>
-          </div>
+            <div>
+                <button onclick="showGif()">Yes</button>
+                <button class="no">No</button>
+            </div>
         </div>
         <div class="gif-container">
             <img src="https://media.tenor.com/PXKZhCEfEfsAAAAi/bubu-bubu-dudu.gif" alt="Celebration GIF">
