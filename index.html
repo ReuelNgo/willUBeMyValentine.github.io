@@ -22,7 +22,10 @@
             border-radius: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             max-width: 90%;
-            height: 250px;
+            min-height: 300px; /* Ensures card grows with content */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .card h1 {
             font-size: 2.5rem;
@@ -93,9 +96,10 @@
             }
         }
         .flex {
-          display: flex;
-          justify-content: center;
-          margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-left: 45px;
         }
     </style>
     <script>
@@ -140,10 +144,12 @@
         <h1>Hi Bubs, Will You Be My Valentine?</h1>
         <p>You make every day special, and I can’t imagine Valentine’s Day without you. ❤</p>
         <div class="flex">
-            <button onclick="showGif()">Yes</button>
-        </div>
-        <div class="flex">
-            <button class="no">No</button>
+          <div class="flex">
+              <button onclick="showGif()">Yes</button>
+          </div>
+          <div class="flex">
+              <button class="no">No</button>
+          </div>
         </div>
         <div class="gif-container">
             <img src="https://media.tenor.com/PXKZhCEfEfsAAAAi/bubu-bubu-dudu.gif" alt="Celebration GIF">
